@@ -32,7 +32,7 @@ app.use((req, res) => {
   res.status(404).send("page not found");
 });
 
-const port = process.env.PORT | 3001;
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log("Started server on port " + port);
 });
