@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie result</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/movie.css" />
+  </head>
+  <body>
+    <div class="container container-2 ">
+      <% if(movies["results"].length===0){ %>
+      <h1>No Movie found with this query</h1>
+      <% }else{ %> <% movies["results"].forEach((movie)=>{ %>
+      <div class="card mb-3">
+        <img
+          class="card-img-top"
+          src="https://image.tmdb.org/t/p/w600_and_h900_bestv2<%= movie.poster_path %>"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title"><%= movie.title %></h5>
+          <p class="card-text">
+            <%= movie.overview %>
+          </p>
+          <p class="card-text">
+            <strong>Date published: </strong><%= movie.release_date %>
+          </p>
+          <p class="card-text">
+            <strong>Total votes: </strong><%= movie.vote_count %>
+          </p>
+          <p class="card-text">
+            <strong>Ratings: </strong><%= movie.vote_average %>
+          </p>
+        </div>
+      </div>
+      <% });} %>
+    </div>
+  </body>
+</html>

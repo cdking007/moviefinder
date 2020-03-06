@@ -1,0 +1,41 @@
+.container-2 {
+  background: #eeeeee;
+  padding: 50px;
+  width: 80%;
+  border-radius: 20px;
+  background: linear-gradient(
+    to top right,
+    rgb(5, 190, 119),
+    rgb(201, 32, 207)
+  );
+  box-shadow: 0 2px 10px rgb(0, 0, 0, 0.5);
+  text-align: center;
+}
+body {
+  background: linear-gradient(
+    to top right,
+    rgb(5, 190, 119),
+    rgb(201, 32, 207)
+  );
+}
+h1 {
+  color: #eeeeee;
+}
+
+.card-body {
+  background: linear-gradient(
+    to top right,
+    rgb(201, 32, 207),
+    rgb(5, 190, 119)
+  );
+}
+.card {
+  border: none;
+  color: #fff;
+  border-radius: 20px !important;
+  box-shadow: 0 2px 10px #000;
+}
+.card-img-top {
+  width: 100%;
+  height: 40%;
+}
